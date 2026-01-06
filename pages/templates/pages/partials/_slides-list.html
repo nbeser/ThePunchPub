@@ -1,0 +1,11 @@
+<h5>Duyurular</h5>
+
+{% for slide in slider %}
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">{{ slide.title }}</h6>
+            <a href="{% url "edit_slider" slide.id %}" class="card-link">Düzenle</a>
+            <a href="{% url "delete_slider" slide.id %}" class="card-link">Sil</a>
+        </div>
+    </div>
+{% endfor %}

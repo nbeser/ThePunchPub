@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+{% endblock %}
+
+{% block title %}
+    Ürünler
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row mt-5">
+        {% include "pages/partials/_buttons.html" %}
+    </div>
+
+    <div class="row">
+        <div class="col-5">
+            {% include "pages/partials/_categories-list.html" %}
+        </div>
+
+        <div class="col-7">
+            {% include "pages/partials/_products-list.html" %}
+        </div>
+
+    </div>
+    
+    <hr>
+
+    <div class="row mt-3">
+        {% include "pages/partials/_slides-list.html" %}
+    </div>
+    
+</div>
+
+
+
+{% endblock content %}

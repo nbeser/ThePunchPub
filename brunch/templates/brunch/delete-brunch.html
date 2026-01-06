@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+{% endblock %}
+
+{% block title %}
+    İçecekler
+{% endblock %}
+
+{% block content %}
+
+    <div class="container container-lg pt-1">
+        <div class="row">
+            
+            <div class="col-12 mt-5">
+                <p>
+                    <strong style="color: #FFFF00; font-weight: bold">{{ brunch.title }}</strong> ürününü silmek istiyor musunuz?
+                    <form action="{% url "delete_brunch" brunch.slug %}" method="POST">
+                        {% csrf_token %}
+                        <button class="btn btn-primary" type="submit">Evet</button>
+                        <a href="{% url "pages_menu" %}" class="btn btn-primary">Hayır</a>
+                    </form>
+                </p>
+                
+
+               
+
+            </div>
+
+           
+        </div>
+
+   </div>
+    
+
+{% endblock content %}

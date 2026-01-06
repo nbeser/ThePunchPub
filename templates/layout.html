@@ -1,0 +1,36 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    {% block css_files %} {% endblock %}
+
+    <title>The Punch Pub | {% block title %} {% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static "img/favicon.ico" %}">
+</head>
+
+<body>
+
+    
+    
+    {% include "partials/_navbar.html" %}
+    
+
+    {% include "partials/_sideLink.html" %}
+
+
+    {% block content %} {% endblock content %}
+    
+    {% include "partials/_bottom.html" %}
+
+</body>
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {% block js_files %}{% endblock %}
+</html>

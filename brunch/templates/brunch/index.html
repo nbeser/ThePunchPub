@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+{% endblock %}
+
+{% block title %}
+    İçecekler
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+
+    <div class="container container-lg pt-1">
+        <div class="row">
+            
+            <div class="col-10 p-2">
+
+                {% for brunch in brunches %}
+                    {% include "brunch/partials/_brunch.html" %}
+                {% endfor %}
+
+
+            </div>
+
+            <div class="col-2">
+                <ul>
+                    <li>
+                        <a href="{% url "beverages_index" %}">İçecekler</a>
+                    </li>
+
+
+                    <li>
+                        <a href="{% url "brunch_index" %}">Yiyecekler</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+   </div>
+    
+
+{% endblock content %}

@@ -1,0 +1,45 @@
+{% load static %}
+
+
+<div class="accordion accordion-flush">
+    <div class="accordion-item mt-1">
+        <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ product.slug }}" aria-expanded="false" aria-controls="flush-collapseOne">
+                <p>{{product.title}} -</p><p class="text-info">{{product.price}} TL</p>
+            </button>
+        </h2>
+        <div id="collapse-{{ product.slug }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <card class="mb-3">
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <img class="img-fluid rounded-start" src="{{ product.image.url }}" alt="{{product.title}}">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    {{product.title}}
+                                    
+                                </h5>
+                                <p class="card-text">{{product.description}}</p>
+
+                                {% if  user.is_authenticated %}
+                                    {% if obje_type == "beverages" %}
+                                        <a href="{% url "edit_beverages" product.slug %}" class="btn btn-warning">Düzenle</a>
+                                        <a href="{% url "delete_beverages" product.slug %}" class="btn btn-warning">Sil</a>
+                                    {% else %}
+                                        <a href="{% url "edit_brunch" product.slug %}" class="btn btn-warning">Düzenle</a>
+                                        <a href="{% url "delete_brunch" product.slug %}" class="btn btn-warning">Sil</a>
+                                    {% endif %}
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    </div>
+                </card>
+
+            </div>
+        </div>
+  </div>
+</div>
+

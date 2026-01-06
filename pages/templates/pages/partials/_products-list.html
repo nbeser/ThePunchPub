@@ -1,0 +1,21 @@
+<h6>Ürünler</h6>
+{% for product in beverages %}
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">{{ product.title }}</h6>
+            <a href="{% url 'edit_beverages' product.slug %}" class="card-link">Düzenle</a>
+            <a href="{% url "delete_beverages" product.slug %}" class="card-link">Sil</a>
+        </div>
+    </div>
+{% endfor %}
+<br>
+
+{% for product in brunch %}
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">{{ product.title }}</h6>
+            <a href="{% url 'edit_brunch' product.slug %}" class="card-link">Düzenle</a>
+            <a href="{% url "delete_brunch" product.slug %}" class="card-link">Sil</a>
+        </div>
+    </div>
+{% endfor %}

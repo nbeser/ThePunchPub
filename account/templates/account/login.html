@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+{% endblock %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+
+
+
+
+    
+<div class="container container-lg">
+
+    <div class="row">
+        
+        <div class="col-12 mt-5">
+
+            <h1>Login</h1>
+
+            <form action="" method="post">
+                {% csrf_token %}
+                {% if error %}
+                    <div class="alert alert-danger">
+                        {{ error }}
+                    </div>                
+                {% endif %}
+
+                <div class="mb-3">
+                    <label for="username" class="form-label">Kullanıcı Adı</label>
+                    <input type="text" name="username" id="username" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Parola</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Giriş</button>
+                
+            </form>
+        </div>
+
+    </div>
+
+</div>
+    
+
+{% endblock content %}

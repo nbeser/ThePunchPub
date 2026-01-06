@@ -1,0 +1,16 @@
+{% load static %}
+
+
+<div class="menu-nav fixed-top" style="top: 57px;">
+    <div class="ms-2">
+        <strong class="text-warning">İçecekler |</strong>
+        {% for category in beverages_categories %}
+        <a href="{% url "products_by_category" category.slug %}" class="{% if chosenCategory == category.slug %}active{% endif %}">{{ category.name|title }}</a>
+        {% endfor %}
+        <strong class="text-warning">Yiyecekler |</strong>
+        {% for category in brunch_categories %}
+        <a href="{% url "products_by_category" category.slug %}" class="{% if chosenCategory == category.slug %}active{% endif %}">{{ category.name|title }}</a>
+        {% endfor %}
+        
+    </div>
+</div>

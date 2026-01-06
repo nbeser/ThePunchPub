@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+{% endblock %}
+
+{% block title %}
+    Anasayfa
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="masthead" style="background:url('{% static "img/punchPub.jpeg" %}');background-size: cover; z-index: 1;">
+    <div class="color-overlay d-flex justify-content-center align-items-center">
+        {% comment %} <h1>The Punch Pub</h1> {% endcomment %}
+    </div>
+</div>
+
+    
+<div class="container container-lg">
+
+    <div class="row">
+        
+        <div class="col-10">
+
+            <H1> Orta</H1>
+            <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, omnis. Earum adipisci facere id alias. Commodi, cumque! Fugiat ipsum delectus sit odio fugit non expedita dolor sint repellat soluta. Aperiam quis deleniti quia debitis odit iste? Deserunt, error reprehenderit cumque dicta ea dignissimos enim fuga aspernatur hic facere quos velit, voluptas sunt nemo, quis omnis inventore! Consequatur veniam nam labore voluptas consequuntur amet quo nemo. Aspernatur dignissimos harum placeat ad architecto rerum vero non deleniti! Velit laudantium sequi saepe expedita suscipit pariatur veniam! Illo quaerat laborum assumenda mollitia. Dolorum dolorem expedita, nemo vel sint corporis sed voluptas reiciendis quo nulla veniam, eligendi laborum aperiam ipsum, accusantium at suscipit perferendis maiores unde pariatur? Earum hic accusamus odit laboriosam beatae soluta labore cumque mollitia expedita magni officiis sapiente asperiores at ducimus nisi, quae sed doloremque veniam ipsa aliquam, voluptas quasi ipsam quaerat? Mollitia facere, placeat aliquid deleniti nam molestias architecto quae ab?</h4>
+
+        </div>
+
+        <div class="col-2">
+            naber
+        </div>
+
+    </div>
+
+</div>
+    
+
+{% endblock content %}
