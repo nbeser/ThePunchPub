@@ -5,7 +5,7 @@ A Django-based pub-web-menu management app.
 <br />
 <div align="center">
   
-![GUI Screenshot]()
+![GUI Screenshot](punchLogo.png)
  
 </div>
 
